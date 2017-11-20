@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MyTwitter</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="align-center">Twitter</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="clearfix">
+      <div class="info">
+        <div class="info-text">
+          <h3 class="info-title">Reto de Código</h3>
+        </div>
+        <p>Hola<br> soy front-end developer jr.</p>
+        <div class="info-code">Código</div>
+      </div>
+      <form>
+        <textarea id="tweet-area" placeholder="¿Qué estás pasando?" autofocus></textarea>
+        <div class="footer-form clearfix">
+          <input id="tweet-btn" class="tweet-btn" type="submit" value="tweet" disabled>  
+          <span id="count" class="count">140</span>
+        </div>
+      </form>
+    </section>
+    <section>
+      <div id="messages"></div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script src="js/vendors/moment.js"></script>
+</body>
+</html>
