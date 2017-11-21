@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
   var countDinamic = document.getElementById('count');
   var MAXCHARACTERS = 140;
 
-  tweetArea.addEventListener('keydown', function(event) {
+  tweetArea.addEventListener('keyup', function(event) {
     console.log(event.target.value.trim().length);
     if (event.target.value.trim().length) {
       var total = MAXCHARACTERS - event.target.value.trim().length;
@@ -37,6 +37,10 @@ window.addEventListener('load', function() {
     if ((event.target.value.trim().length / event.target.cols) < event.target.rows) {
       event.target.rows = (event.target.value.trim().length / event.target.cols) + 2;
     }
+  });
+  
+  tweetArea.addEventListener('keydown', function(event) {
+    countDinamic.textContent = MAXCHARACTERS - tweetArea.value.length;
   });
 
   tweetBtn.addEventListener('click', function(event) {
